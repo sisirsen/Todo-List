@@ -3,13 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>ToDo List</title>
+   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
+<body class="bg-blue-500 flex item-center justify-center h-screen">
 
-  <div>
-<div>To do list</div>
-<div><input id="tasks" type="text" placeholder="Enter tasks..."> <button id="button">add</button></div>
+  <div class="bg-white gap-5 p-6 m-3 rounded-2xl shadow-lg w-[400px] h-fit contect">
+
+<div class="text-center text-2xl  font-bold">ToDo list</div>
+
+<div class="flex items-center justify-center gap-4 mt-7" >
+  <input class="bg-transparent rounded-2xl px-3 py-2 border border-black w-[250px]"
+  
+  id="tasks" type="text" placeholder="Enter tasks...">
+
+   <button class="bg-green-300 rounded-2xl p-3" id="button">Add</button>
+  </div> 
+
+
 <ul id="list"></ul>
 
 

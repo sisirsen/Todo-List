@@ -11,8 +11,15 @@ btn.addEventListener("click",()=>{
     alert("You have no input")
     return
 }
-    lst.insertAdjacentHTML("beforeend",`<li>${value}</li>`)
-
+    lst.insertAdjacentHTML("beforeend",`<li class="listClass">${value} <button class="deleteBtn">🗑️</button></li>`)
+    
+    
     input.value="";
-})
-
+    
+  })
+    lst.addEventListener("click",(e)=>{
+      if (e.target.classList.contains("deleteBtn")) {
+        e.target.closest("li").remove()
+      }
+    })
+    
