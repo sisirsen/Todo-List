@@ -1,6 +1,7 @@
 let input=document.querySelector("#tasks");
 let btn=document.querySelector("#button");
 let lst=document.querySelector("#list");
+let joke=document.querySelector("#Joke")
 
 // Add button
 btn.addEventListener("click",()=>{
@@ -9,7 +10,7 @@ let val=input.value.trim();
 
   //Edge case
   if (val===""){
-    alert("You have no input")
+    alert(" Sorry! You have no input")
     return
 }
 
@@ -53,3 +54,17 @@ let val=input.value.trim();
         }
     })
     
+  async function jokes() {
+  try {
+    let res= await fetch ("https://uselessfacts.jsph.pl/api/v2/facts/random");
+    let jokeInp= await res.json()
+
+    let jokeBox=`${jokeInp.text}`
+
+    joke.innerText=jokeBox;
+  
+  } catch (error) {
+    joke.innerText="Failed to load the fact 😵‍💫"
+  }
+ }
+ jokes()

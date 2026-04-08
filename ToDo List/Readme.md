@@ -11,6 +11,9 @@ A simple Todo List application built using HTML, CSS, and JavaScript. This proje
 * Delete task
 * Clean UI
 
+# Added Feature
+* A fact Box which will show a random fact, on every refresh the fact will change
+
 
 # Tech Stack
 
@@ -23,7 +26,8 @@ A simple Todo List application built using HTML, CSS, and JavaScript. This proje
 * `document.querySelector()`
 * `addEventListener()`
 * `insertAdjacentHTML()`
-*  `.trim()`
+* `.trim()`
+* `async await`
 
 
 # Learning Outcome
@@ -32,6 +36,7 @@ This project helped in understanding:
 
 * How JavaScript interacts with HTML using the DOM
 * Event handling in real applications
+* Api handling
 
 # Author
 

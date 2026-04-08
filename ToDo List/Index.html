@@ -6,7 +6,7 @@
   <title>ToDo List</title>
    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body class="bg-blue-500 grid place-content-center h-screen ">
+<body class="bg-[url('assets/body.jpg')] bg-cover grid place-content-center h-screen ">
 
   <div class="bg-white gap-5 p-6 m-3 rounded-2xl shadow-lg w-[400px] h-fit contect">
 
@@ -24,6 +24,19 @@
 <ul id="list"></ul>
   </div>
   
+
+  <div class="bg-white ml-3 shadow-lg mt-7 w-[400px] text-purple-600 text-lg rounded-xl p-3 h-fit content  break-words"> 
+    <div class="font-bold flex justify-between text-black">A fact for you
+      <!-- <div class="group">
+        <button class="w-5 h-5"><img src="assets/info-button.png"></button>
+
+        <div class="hidden group-hover:block bg-black text-white rounded-xl p-3">On every refresh the fact will update</div>
+      </div> -->
+      
+      <img class="h-8 w-8" src="assets/laugh.png"></div>
+
+    <div id="Joke" class="font-bold mt-2 text-pink-500">Fact is loading...</div>
+  </div>
   <script src="script.js"></script>
 </body>
 </html>
