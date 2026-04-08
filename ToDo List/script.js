@@ -1,7 +1,7 @@
 let input=document.querySelector("#tasks");
 let btn=document.querySelector("#button");
 let lst=document.querySelector("#list");
-let joke=document.querySelector("#Joke")
+let fact=document.querySelector("#Fact")
 
 // Add button
 btn.addEventListener("click",()=>{
@@ -54,17 +54,17 @@ let val=input.value.trim();
         }
     })
     
-  async function jokes() {
+  async function facts() {
   try {
     let res= await fetch ("https://uselessfacts.jsph.pl/api/v2/facts/random");
-    let jokeInp= await res.json()
+    let factInp= await res.json()
 
-    let jokeBox=`${jokeInp.text}`
+    let factBox=`${factInp.text}`
 
-    joke.innerText=jokeBox;
+    fact.innerText=factBox;
   
   } catch (error) {
     joke.innerText="Failed to load the fact 😵‍💫"
   }
  }
- jokes()
+ facts()
