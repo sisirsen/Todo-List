@@ -6,10 +6,9 @@ A simple Todo List application built using HTML, CSS, and JavaScript. This proje
 # Features
 
 * Add new tasks
-* Checkbox to select a tesk
 * Prevent empty input
-* Delete taks
-* Edit tasks
+* Add a line through as markdone
+* Delete task
 * Clean UI
 
 
@@ -23,8 +22,8 @@ A simple Todo List application built using HTML, CSS, and JavaScript. This proje
 
 * `document.querySelector()`
 * `addEventListener()`
-* `insertAdjacentHTML()` / `append()`
-*  Input validation using `.trim()`
+* `insertAdjacentHTML()`
+*  `.trim()`
 
 
 # Learning Outcome
@@ -33,9 +32,6 @@ This project helped in understanding:
 
 * How JavaScript interacts with HTML using the DOM
 * Event handling in real applications
-* Dynamic content rendering
-
----
 
 # Author
 
