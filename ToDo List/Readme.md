@@ -38,6 +38,13 @@ This project helped in understanding:
 * Event handling in real applications
 * Api handling
 
+# Screenshots
+
+![normalLook](assets/Readme/normalLook.png)
+![normalLook](assets/Readme/withFactBox.png)
+![normalLook](assets/Readme/AddedValue.png)
+![normalLook](assets/Readme/fullPage.png)
+
 # Author
 
 Sisir Sen
