@@ -5,12 +5,12 @@ let fact=document.querySelector("#Fact")
 
 // Add button
 btn.addEventListener("click",()=>{
-let val=input.value.trim();
+let val=input.value.trim().toUpperCase();
 
 
   //Edge case
   if (val===""){
-    alert(" Sorry! You have no input")
+    lst.innerHTML=`<p class="flex justify-center mt-5 bg-red-500 text-white font-bold p-2 rounded-lg">⚠️ There is no input !</p>`
     return
 }
 
@@ -64,7 +64,7 @@ let val=input.value.trim();
     fact.innerText=factBox;
   
   } catch (error) {
-    joke.innerText="Failed to load the fact 😵‍💫"
+    joke.innerHTML=`<p class="flex justify-center mt-5 bg-red-500 text-white font-bold p-2 rounded-lg">⚠️ Failed to load the joke !</p>`
   }
  }
  facts()
