@@ -7,16 +7,16 @@
 </head>
 <body class="bg-[url('assets/body.jpg')] bg-cover grid place-content-center h-screen ">
 
-  <div class="bg-white gap-5 p-6 m-3 rounded-2xl shadow-lg w-[400px] h-fit contect">
+  <div class=" backdrop-blur-lg bg-white/20 gap-5 p-6 m-3 rounded-2xl shadow-lg w-[400px] h-fit contect">
 
-<div class="text-center text-2xl  font-bold cursor-none">ToDo List</div>
+<div class="text-center text-2xl font-bold cursor-none">ToDo List</div>
 
 <div class="flex items-center justify-center gap-4 mt-7" >
-  <input class="bg-transparent rounded-2xl px-3 py-2 border-2 border-black w-[250px]"
+  <input class="bg-transparent outline-none rounded-2xl px-3 py-2 border-1 border-white text-white w-[250px]"
   
   id="tasks" type="text" placeholder="Enter tasks...">
 
-   <button class="bg-green-300 rounded-2xl p-3 cursor-pointer" id="button">Add</button>
+   <button class="bg-green-400 hover:bg-green-500 rounded-2xl p-3 px-6 cursor-pointer" id="button">Add</button>
   </div> 
 
 
@@ -24,8 +24,8 @@
   </div>
   
 
-  <div class="bg-white ml-3 shadow-lg mt-7 w-[400px] text-purple-600 text-lg rounded-xl p-3 h-fit content  break-words"> 
-    <div class="font-bold flex justify-between text-black">A fact for you
+  <div class=" backdrop-blur-lg bg-white/10 ml-3 shadow-lg mt-7 w-[400px] text-purple-600 text-lg rounded-xl p-3 h-fit content  break-words"> 
+    <div class="font-bold flex justify-between text-green-500">A fact for you
       <!-- <div class="group">
         <button class="w-5 h-5"><img src="assets/info-button.png"></button>
 
@@ -34,7 +34,7 @@
       
       </div>
 
-    <div id="Fact" class="font-bold mt-2 text-pink-500">Fact is loading...</div>
+    <div id="Fact" class="font-bold mt-2 text-slate-300">Fact is loading...</div>
   </div>
   <script src="script.js"></script>
 </body>
