@@ -3,24 +3,50 @@ let btn=document.querySelector("#button");
 let lst=document.querySelector("#list");
 let fact=document.querySelector("#Fact")
 
+const loadTask= () =>{
+  const data=localStorage.getItem("task")
+  if (data) {
+    lst.innerHTML=data
+    
+  }
+}
+loadTask()
+
+const saveTasks = ()=>{
+  localStorage.setItem("task", lst.innerHTML)
+}
+saveTasks()
 // Add button
 btn.addEventListener("click",()=>{
-let val=input.value.trim().toUpperCase();
+let val=input.value.trim()
 
 
   //Edge case
-  if (val===""){
-    lst.innerHTML=`<p class="flex justify-center mt-5 bg-red-500 text-white font-bold p-2 rounded-lg">⚠️ There is no input !</p>`
-    return
+  if (val === "") {
+  lst.insertAdjacentHTML("afterbegin", `
+    <p class="error-msg flex justify-center mt-5 bg-red-500 text-white font-bold p-2 rounded-lg">
+    ⚠️ There is no input !
+    </p>`);
+    return;
+    saveTasks()
 }
 
+   document.querySelector(".error-msg")?.remove();
+    
 
-    lst.insertAdjacentHTML("afterbegin",`<li class="flex items-center justify-between bg-gray-200 px-3 py-1 rounded-lg mb-2 mt-5 shadow-sm text-lg font-bold font-[] text-blue-800">
+
+    lst.insertAdjacentHTML("afterbegin",`
+      
+      <li class="flex break-all items-center justify-between bg-gray-200 px-3 py-1 rounded-lg mb-2 mt-5 shadow-sm text-lg font-bold font-[] text-blue-800">
+      <span>
       ${val} 
-      <div class=" flex item-center gap-7">
+      </span>
+
+
+      <div class=" flex item-center gap-4 shrink-0">
       
       <button>
-      <img class="markDone w-[20px] h-[20px] cursor-pointer" src="assets/mark.png"
+      <img class="markDone w-[20px] h-[20px]  cursor-pointer" src="assets/mark.png"
       </button>
 
       <button>
@@ -28,15 +54,20 @@ let val=input.value.trim().toUpperCase();
       </button>
       </div>
       
-      </li>`)
+      </li>
+      
+      `)
     
     
     input.value="";// input will be empty after add
-    
+      
+    saveTasks()
   })
     lst.addEventListener("click",(e)=>{
       if (e.target.classList.contains("deleteBtn")) {
         e.target.closest("li").remove()
+
+        saveTasks()
       }
     })
 
@@ -44,6 +75,8 @@ let val=input.value.trim().toUpperCase();
       if(e.target.classList.contains("markDone")){
         const li2=e.target.closest("li")
         li2.classList.toggle("line-through")
+
+        saveTasks()
       }
     })
 
@@ -64,7 +97,7 @@ let val=input.value.trim().toUpperCase();
     fact.innerText=factBox;
   
   } catch (error) {
-    joke.innerHTML=`<p class="flex justify-center mt-5 bg-red-500 text-white font-bold p-2 rounded-lg">⚠️ Failed to load the joke !</p>`
+    fact.innerHTML=`<p class="flex justify-center mt-5 bg-red-500 text-white font-bold p-2 rounded-lg">⚠️ Failed to load the joke !</p>`
   }
  }
  facts()
