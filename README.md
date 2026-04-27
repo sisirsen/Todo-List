@@ -13,6 +13,7 @@ https://todo-list-iota-silk-22.vercel.app/
 * Add a line through as markdone
 * Delete task
 * Clean UI
+* Local storage(Task will save, auto load) 
 
 # Added Feature
 * A fact Box which will show a random fact, on every refresh the fact will change
@@ -43,10 +44,11 @@ This project helped in understanding:
 
 # Screenshots
 
-![normalLook](assets/Readme/normalLook.png)
-![normalLook](assets/Readme/withFactBox.png)
+![normalLook](assets/Readme/NormalLook.png)
+![normalLook](assets/Readme/WithFactBox.png)
+![normalLook](assets/Readme/NoInputError.png)
 ![normalLook](assets/Readme/AddedValue.png)
-![normalLook](assets/Readme/fullPage.png)
+![normalLook](assets/Readme/FullPage.png)
 
 # Author
 
